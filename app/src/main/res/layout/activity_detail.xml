@@ -6,7 +6,7 @@
 
         <variable
             name="viewmodel"
-            type="com.benmohammad.rxish.views.main_activity.MainActivity" />
+            type="com.benmohammad.rxish.views.detail_activity.DetailActivityViewModel" />
 
     </data>
 
@@ -48,7 +48,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="@{}">
+                android:onClick="@{v -> viewmodel.changeFavoriteStatus()}">
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/animation_favourite"
@@ -87,6 +87,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
+                    android:profilePicURL="@{viewmodel.profilePicUrl}"
                     />
 
                 <TextView
@@ -94,7 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text=""
+                    android:text="@{viewmodel.name}"
                     android:textAlignment="center"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/title_text_size_detail_screen" />
@@ -103,7 +104,7 @@
                     android:id="@+id/company_name_on_detail_screen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="@{viewmodel.company}"
                     android:textAlignment="center" />
 
 
@@ -132,7 +133,7 @@
                         android:layout_marginTop="60dp"
                         android:textColor="@color/colorAccent"
                         android:textSize="18dp"
-                        android:text=""
+                        android:text="@{viewmodel.homePhone}"
                         android:textAllCaps="true" />
 
                     <TextView
@@ -164,7 +165,7 @@
                     <TextView
                         android:id="@+id/mobile_phone_text"
                         android:layout_marginTop="60dp"
-                        android:text=""
+                        android:text="@{viewmodel.mobilePhone}"
                         android:textColor="@color/colorAccent"
                         android:textSize="18dp"
                         android:textAllCaps="true"
@@ -200,7 +201,7 @@
                     <TextView
                         android:id="@+id/eork_phone_text"
                         android:layout_marginTop="60dp"
-                        android:text=""
+                        android:text="@{viewmodel.workPhone}"
                         android:textColor="@color/colorAccent"
                         android:textSize="18dp"
                         android:textAllCaps="true"
@@ -240,7 +241,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:text=""
+                            android:text="@{viewmodel.address}"
                             android:textColor="@color/colorAccent"
                             android:textSize="18dp"
                             android:layout_width="wrap_content"
@@ -269,7 +270,7 @@
 
                     <TextView
                         android:layout_marginTop="60dp"
-                        android:text=""
+                        android:text="@{viewmodel.birthDate}"
                         android:textColor="@color/colorAccent"
                         android:textSize="18dp"
                         android:layout_width="wrap_content"
@@ -296,7 +297,7 @@
 
                     <TextView
                         android:layout_marginTop="60dp"
-                        android:text=""
+                        android:text="@{viewmodel.email}"
                         android:textColor="@color/colorAccent"
                         android:textSize="18dp"
                         android:layout_width="wrap_content"

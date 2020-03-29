@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.databinding.BindingAdapter;
+
 import com.benmohammad.rxish.R;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -125,7 +127,7 @@ public class User {
         this.address = address;
     }
 
-//    @BindingAdapter("android:imageUrl")
+    @BindingAdapter("android:imageUrl")
     public static void loadImage (View view, String smallImageURL){
         ImageView imageView = (ImageView) view;
         Picasso.get().load(smallImageURL).into(imageView, new Callback() {

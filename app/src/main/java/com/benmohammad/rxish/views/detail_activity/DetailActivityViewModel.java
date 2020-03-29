@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.databinding.BindingAdapter;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -53,6 +54,7 @@ public class DetailActivityViewModel extends ViewModel {
         isFavorite.setValue(!isFavorite.getValue());
     }
 
+    @BindingAdapter("android:profilePicURL")
     public static void loadImage(View view, String URL) {
         ImageView imageView = (ImageView) view;
         Picasso.get().load(URL).into(imageView, new Callback() {

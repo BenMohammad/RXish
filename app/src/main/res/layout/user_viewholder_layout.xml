@@ -50,13 +50,13 @@
                 android:src="@drawable/ic_launcher_foreground"
                 />
 
-<!--            <com.airbnb.lottie.LottieAnimationView-->
-<!--                android:id="@+id/animation_favourite"-->
-<!--                android:layout_width="32dp"-->
-<!--                android:layout_height="32dp"-->
-<!--                android:layout_marginLeft="15dp"-->
-<!--                app:lottie_rawRes="@raw/favourite"-->
-<!--                app:lottie_autoPlay="true" />-->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_favourite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="15dp"
+                app:lottie_rawRes="@raw/favorite"
+                app:lottie_autoPlay="true" />
 
             <LinearLayout
                 android:orientation="vertical"
