@@ -87,9 +87,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityRecyc
 
     @Override
     protected void onResume() {
+
+//        if(UserListContainer.referenceUserList.getValue() != null) {
+//            viewModel.updateUserListWithNewFavoriteCount();
+//        }
         super.onResume();
-        if(UserListContainer.referenceUserList.getValue() != null) {
-            viewModel.updateUserListWithNewFavoriteCount();
-        }
     }
 }
