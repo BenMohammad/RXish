@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RXish</string>
+    <string name="email">Email</string>
+    <string name="birthdate">D.O.B</string>
+    <string name="adress">Address</string>
+    <string name="work">Work</string>
+    <string name="phone">Phone</string>
+    <string name="mobile">Mobile</string>
+    <string name="home">Home</string>
+    <string name="other_contacts">Other Contacts</string>
+    <string name="favorite_contacts">Favorites</string>
+    <string name="contacts">Contacts</string>
+</resources>

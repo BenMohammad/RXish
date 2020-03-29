@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="user"
+            type="com.benmohammad.rxish.model.User"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/favorite_viewholder_header"
+            android:text="@string/favorite_contacts"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/other_contacts_viewholder_header"
+            android:text="@string/other_contacts"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:padding="4dp"
+            android:gravity="center_vertical"
+            android:id="@+id/rootView">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_launcher_foreground"
+                />
+
+<!--            <com.airbnb.lottie.LottieAnimationView-->
+<!--                android:id="@+id/animation_favourite"-->
+<!--                android:layout_width="32dp"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                app:lottie_rawRes="@raw/favourite"-->
+<!--                app:lottie_autoPlay="true" />-->
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:text="@{user.name}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileName"/>
+
+                <TextView
+                    android:id="@+id/profileEmail"
+                    android:text="@{user.companyName}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</layout>
