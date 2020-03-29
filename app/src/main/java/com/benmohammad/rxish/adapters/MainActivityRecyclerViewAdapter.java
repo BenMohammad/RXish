@@ -48,6 +48,10 @@ public class MainActivityRecyclerViewAdapter extends RecyclerView.Adapter<MainAc
         return userList.size();
     }
 
+    public void setUserViewHolderInterface(UserViewHolderInterface userViewHolderInterface) {
+        this.userViewHolderInterface = userViewHolderInterface;
+    }
+
     public interface UserViewHolderInterface {
         void onUserClicked(int adapterPosition);
     }
@@ -57,7 +61,7 @@ public class MainActivityRecyclerViewAdapter extends RecyclerView.Adapter<MainAc
         UserViewholderLayoutBinding layoutBinding;
 
         UserViewHolder(UserViewholderLayoutBinding binding) {
-            super(binding.rootView);
+            super(binding.getRoot());
             this.layoutBinding = binding;
 
 
